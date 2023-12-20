@@ -27,7 +27,7 @@ router.get('/post', async (req, res) => {
 });
 
 // GET one blog
-router.get('/blog/:id', async (req, res) => {
+router.get('/blog/:id', withAuth, async (req, res) => {
     console.log("its hitting")
     try {
         let blogData = await Blog.findByPk(req.params.id, {
