@@ -381,7 +381,7 @@ button.update-comment-btn:hover {
   transition: 0.4s;
 }
 
-@media screen and (min-width: 430px) and (max-width: 932px) {
+@media screen and (min-width: 390px) and (max-width: 932px) {
   body {
     margin: 0;
   }
