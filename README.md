@@ -33,14 +33,21 @@ If you have any questions you can email me at kbrandon863@gmail.com if you want 
 
 
 ## Preview
+
+
+### Login Screen:
 ![Login Screen](https://github.com/bkness/model-view-controller/assets/123907755/7031f918-e83f-4561-b3ff-03ad791e587e)
 
+### Dashboard Screen:
 ![Dashboard Screen](https://github.com/bkness/model-view-controller/assets/123907755/cf4463f5-8ca5-4206-898a-e369b54d3598)
 
+### Blog Post Screen: 
 ![Blog Post Screen](https://github.com/bkness/model-view-controller/assets/123907755/70a0efd9-2340-4d2a-9d34-b86ecae23686)
 
+### Comment Section Screen:
 ![Comment Post Screen](https://github.com/bkness/model-view-controller/assets/123907755/21fa0918-7819-4beb-b44c-bdc2c0ec35ce)
 
+### Mobile Homepage View
 ![Mobile View](https://github.com/bkness/model-view-controller/assets/123907755/84baefd4-d4d5-4fe3-99da-8b7134a55032)
 
 
