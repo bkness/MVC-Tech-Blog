@@ -220,7 +220,8 @@ p,
   background: linear-gradient(to bottom, #1f1e13, #4d4c3c);
 }
 
-.form-label {
+#blog-content,
+#blog-label {
   display: block;
   margin-bottom: 8px;
 }
@@ -330,7 +331,6 @@ div.user-comments {
 }
 
 input {
-  height: 200px;
   font-size: 17px;
 }
 
