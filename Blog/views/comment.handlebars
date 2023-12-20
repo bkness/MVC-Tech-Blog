@@ -1,0 +1,33 @@
+<div class="blog-container">
+    <div id="blog-post">
+        <div id="blog-title">
+            <h2>{{blog.title}}</h2>
+            <p><i>Published on {{format_date blog.dateCreated}}</i></p>
+        </div>
+        <div class="blog-body" id="content-body">
+            <p>{{blog.contentPost}}</p>
+        </div>
+    </div>
+    <input id="blog-id" hidden="hidden" value="{{blog.id}}">
+    <div class="blog-comment" id="comment-form">
+        <label for="comment-input">Comment:</label></br>
+        <textarea class="input" style="width: 75%; height: 50px" id="comment-text"></textarea></br>
+        <button id="comment-submit" type="submit" class="comment-card-submit">Submit</button>
+    </div>
+</div>
+<section class="comment-posts">
+    {{#each blog.Comments}}
+    <div class="user-comments">
+        <p id="commentText-{{id}}">{{commentPost}}</p>
+        <p><i>Commented by {{user.name}} on {{format_date dateCreated}}</i></p>
+        {{#if (isCommentOwner user.id ../session.user_id)}}
+        <button class="update-comment-link" data-comment-id="{{id}}">Update</button>
+        <button class="delete-comment-btn" data-comment-id="{{id}}">Delete</button>
+        {{/if}}
+    </div>
+    {{/each}}
+</section>
+
+<script src="/js/update-comment.js"></script>
+<script src="/js/comment.js"></script>
+<script src="/js/delete-comment.js"></script>

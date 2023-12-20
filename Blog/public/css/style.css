@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Orbitron';
+    background-image: url('https://i.pinimg.com/736x/0b/fb/7a/0bfb7a0186b1e2c89dd7bbd4d016a9ce.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    font-family: 'Orbitron';
+    background-color: rgb(49, 46, 46);
+    height: 75px;
+  }
+  
+  nav {
+    font-size: 20px;
+  }
+
+  a {
+    text-decoration: none;
+    color: rgb(25, 151, 214);
+  }
+
+  i, h2 {
+    padding: 10px;
+  }
+
+  #logout {
+    background: none;
+    border: none;
+    color: rgb(25, 151, 214);
+    font-size: 20px;
+    font-family: 'Orbitron';
+  }
+
+  #logout:hover {
+    color: rgb(19, 224, 231);;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+#log-text {
+    color: rgb(26, 158, 223);   
+    font-size: 20px;
+}
+ 
+#login-form, #signup-form {
+    width: 40%;
+    padding: 70px;
+    margin: 20px;
+}
+
+#corner {
+    padding: 15px;
+    color: rgb(26, 158, 223); 
+    text-align: center;
+}
+
+#signup-container,
+#login-container {
+  background: linear-gradient(to bottom, #1f1e13, #4d4c3c);
+  margin: 6% 0 6% 0;
+  border: black;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
+
+}
+
+#signup-submit,
+#login-submit {
+  padding: 15px;
+  margin-top: 10px;
+  width: 150%;
+  color: #312e1e;
+  background-color: rgb(26, 158, 223);   
+  border-radius: 5px;
+  border: none;
+}
+
+#signup-submit:hover, 
+#login-submit:hover {
+   background-color: rgb(19, 224, 231);
+}
+
+.form-control {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+  }
+  
+#name-signup,
+#email-signup,  
+#password-signup,
+#email-login,
+#password-login {
+    width: 150%;
+    margin-top: 10px;
+}
