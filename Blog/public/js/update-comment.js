@@ -13,7 +13,8 @@ window.addEventListener('load', function () {
             commentTextElement.replaceWith(inputField);
 
             const saveButton = document.createElement('button');
-            saveButton.textContent = 'Save';
+            saveButton.classList.add('update-comment-btn'); 
+            saveButton.textContent = 'Update';
             saveButton.addEventListener('click', async function () {
                 const updatedCommentText = inputField.value;
 

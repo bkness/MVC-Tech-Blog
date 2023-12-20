@@ -6,8 +6,7 @@
     <div class="top-container" id="blog-post">
         <div id="blog-title">
             <h2>{{blog.title}} </h2>
-            <h3>{{blog.user.name}}</h3>
-            <p><i>Published on {{format_date dateCreated}} </i> </p>
+            <p><i>Published by {{blog.user.name}} on {{format_date dateCreated}} </i> </p>
         </div>
         <div class="blog-body" id="content-body">
             <p>{{blog.contentPost}}</p>
