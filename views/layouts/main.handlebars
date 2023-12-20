@@ -22,9 +22,14 @@
           <button id="logout">Logout</button>
         </div>
       {{else}}
-          <a href="/login">Login</a>
+        <a href="/login">Login</a>
       {{/if}}
     </nav>
+    <div class="hamburger" onclick="toggleMenu()">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
   </header>
   <main class="container container-fluid mt-5">
     {{{ body }}}
@@ -40,3 +45,5 @@
 </body>
 
 </html>
+
+<script src="/js/hamburger.js"></script>
