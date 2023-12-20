@@ -60,12 +60,17 @@ a {
   padding: 3px;
 }
 
+a:hover {
+  color: rgb(19, 224, 231);
+}
+
 #logout {
   background: none;
   border: none;
   color: rgb(25, 151, 214);
   font-size: 20px;
   font-family: 'Orbitron';
+  cursor: pointer;
 }
 
 #logout:hover {
@@ -116,6 +121,7 @@ a {
   background-color: rgb(26, 158, 223);
   border-radius: 5px;
   border: none;
+  color: azure;
 }
 
 #signup-submit:hover,
@@ -152,7 +158,7 @@ a {
 
 #blog-label {
   background-color: rgb(215, 215, 215);
-  width: 75%;
+  width: 100%;
   border-radius: 5px;
 }
 
@@ -185,6 +191,10 @@ p,
   font-size: 20px;
   border-radius: 5px;
   border: none;
+}
+
+#createBlogSubmit {
+  margin-top: 10px;
 }
 
 #comment-submit {
@@ -302,8 +312,9 @@ div.user-comments {
   position: relative;
 }
 
-.comment-text {
+#comment-text {
   margin-bottom: 5px;
+  width: 98%;
 }
 
 .update-comment-link,
@@ -317,6 +328,7 @@ div.user-comments {
   border: none;
   color: rgb(26, 158, 223);
   font-size: 20px;
+  cursor: pointer;
 }
 
 .delete-comment-btn {
@@ -349,3 +361,30 @@ button.update-comment-btn {
 button.update-comment-btn:hover {
   background-color: rgb(19, 224, 231);
 }
+
+@media screen and (min-width: 430px) and (max-width: 932px) {
+  .comment-container i {
+    margin: 0;
+  }
+  #create-post-button {
+    padding: 12px;
+  }
+  #createBlogSubmit {
+    padding: 12px;
+    width: 100%;
+  }
+  input#blog-label {
+    width: 100%;
+  }
+  textarea#blog-content {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  #comment-text {
+    width: 93%;
+  }
+  #comment-submit {
+    width: 45%;
+  }
+}
+  
