@@ -384,6 +384,7 @@ button.update-comment-btn:hover {
 @media screen and (min-width: 390px) and (max-width: 932px) {
   body {
     margin: 0;
+    overflow-x: hidden;
   }
 
   nav {
@@ -443,6 +444,17 @@ button.update-comment-btn:hover {
 
   #comment-text {
     width: 93%;
+  }
+
+  p {
+    width: 90%;
+    margin-left: 10px;
+    overflow: scroll;
+  }
+
+  .author-comment {
+    margin-top: 45px;
+    overflow-y: scroll;
   }
 
   #comment-submit {

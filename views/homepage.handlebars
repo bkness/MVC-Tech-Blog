@@ -6,7 +6,9 @@
     <div class="top-container" id="blog-post">
         <div id="blog-title">
             <h2>{{blog.title}} </h2>
+            <div class="author-info">
             <p><i>Published by {{blog.user.name}} on {{format_date dateCreated}} </i> </p>
+         </div>
         </div>
         <div class="blog-body" id="content-body">
             <p>{{blog.contentPost}}</p>

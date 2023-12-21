@@ -20,7 +20,7 @@
     <div class="comment-container">
     <div class="user-comments">
         <p id="commentText-{{id}}">{{commentPost}}</p>
-        <p><i>By {{user.name}} on {{format_date dateCreated}}</i></p>
+        <p class="author-comment"><i>By {{user.name}}</i></p>
         {{#if (isCommentOwner user.id ../session.user_id)}}
         <button class="update-comment-link" data-comment-id="{{id}}">Update</button>
         <button class="delete-comment-btn" data-comment-id="{{id}}">Delete</button>
