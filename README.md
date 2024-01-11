@@ -53,3 +53,7 @@ If you have any questions you can email me at kbrandon863@gmail.com if you want 
 ## Deployed
 
 [Tech Blog](https://mvc--tech-blog-715ec89956fb.herokuapp.com/)
+
+## Code
+
+[GitHub] (https://github.com/bkness/MVC-Tech-Blog)
