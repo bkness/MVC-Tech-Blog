@@ -31,7 +31,6 @@ Fork the project and open a pull request with your new code
 If you have any questions you can email me at kbrandon863@gmail.com if you want to see more of my work, visit my GitHub at [bkness](https://github.com/bkness)
 
 
-
 ## Preview
 
 
@@ -51,3 +50,6 @@ If you have any questions you can email me at kbrandon863@gmail.com if you want 
 ![Mobile View](https://github.com/bkness/model-view-controller/assets/123907755/84baefd4-d4d5-4fe3-99da-8b7134a55032)
 
 
+## Deployed
+
+[Tech Blog](https://mvc--tech-blog-715ec89956fb.herokuapp.com/)
