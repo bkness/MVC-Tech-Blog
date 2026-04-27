@@ -1,43 +1,57 @@
-# Model View Controller Tech Blog
+# Devlog
 
-## Description
+A full-stack blogging platform for developers. Log in, write posts, and comment on the community feed. Sessions expire after one hour of inactivity.
 
-This project demonstrates my understanding and proficiency in building client-server applications using models, seeds, controllers with express routers, and Sequelize.
+## Features
 
-## Table of Contents
+- Create and manage blog posts
+- Comment on posts from other developers
+- JWT session-based authentication
+- Mobile-responsive UI
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [Questions](#questions)
-- [Preview](#preview)
-- [Deployed](#deployed)
-- [Code](#code)
+## Tech Stack
+
+**Client:** Handlebars, Bootstrap  
+**Server:** Node.js, Express, Sequelize, MySQL
 
 ## Installation
 
-To install dependencies, run:
- 
-`npm i`
+1. Clone the repository:
+
+   ```sh
+   git clone https://github.com/bkness/devlog.git
+   cd devlog
+   ```
+
+2. Install dependencies:
+
+   ```sh
+   npm install
+   ```
+
+3. Create a `.env` file:
+
+   ```
+   DB_NAME=devlog_db
+   DB_USER=root
+   DB_PASSWORD=your_password
+   SESSION_SECRET=your_secret
+   ```
+
+4. Seed the database and start the server:
+
+   ```sh
+   npm run seed
+   npm start
+   ```
 
 ## Usage
 
-1. Install necessary packages with `npm install`.
-2. Seed your database (refer to Sequelize and MySQL documentation).
-3. Start the server with `npm start`.
-4. Access the application via `localhost:3001`.
+Visit [http://localhost:3001](http://localhost:3001) in your browser.
 
-Users can log in, view blogs, post blogs, and comment on blogs. Login sessions expire after one hour of inactivity.
+Live demo: [https://mvc-tech-blog-production-c752.up.railway.app](https://mvc-tech-blog-production-c752.up.railway.app)
 
-## Contributing
-
-To contribute, fork the project and submit a pull request.
-
-## Questions
-
-If you have any questions, feel free to reach out via email at kbrandon863@gmail.com. You can also explore more of my work on [GitHub](https://github.com/bkness).
-
-## Preview
+## Screenshots
 
 ### Login Screen
 ![Login Screen](https://github.com/bkness/model-view-controller/assets/123907755/7031f918-e83f-4561-b3ff-03ad791e587e)
@@ -48,16 +62,12 @@ If you have any questions, feel free to reach out via email at kbrandon863@gmail
 ### Blog Post Screen
 ![Blog Post Screen](https://github.com/bkness/model-view-controller/assets/123907755/70a0efd9-2340-4d2a-9d34-b86ecae23686)
 
-### Comment Section Screen
+### Comment Section
 ![Comment Post Screen](https://github.com/bkness/model-view-controller/assets/123907755/21fa0918-7819-4beb-b44c-bdc2c0ec35ce)
 
-### Mobile Homepage View
+### Mobile View
 ![Mobile View](https://github.com/bkness/model-view-controller/assets/123907755/84baefd4-d4d5-4fe3-99da-8b7134a55032)
 
-## Deployed
+## Contact
 
-Check out the deployed application [here](https://mvc--tech-blog-715ec89956fb.herokuapp.com/).
-
-## Code
-
-Explore the code on [GitHub](https://github.com/bkness/MVC-Tech-Blog).
+Brandon Kelly — [GitHub](https://github.com/bkness) · kbrandon863@gmail.com
