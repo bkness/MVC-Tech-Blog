@@ -3,8 +3,8 @@ require('dotenv').config();
 
 let sequelize;
 
-if (process.env.DATABASE_URL) {
-  sequelize = new Sequelize(process.env.DATABASE_URL);
+if (process.env.MYSQL_URL || process.env.DATABASE_URL) {
+  sequelize = new Sequelize(process.env.MYSQL_URL || process.env.DATABASE_URL);
 } else {
   sequelize = new Sequelize(
     process.env.DB_NAME,
