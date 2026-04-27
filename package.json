@@ -22,7 +22,7 @@
         "express-handlebars": "^5.2.0",
         "express-session": "^1.19.0",
         "mysql2": "^3.9.8",
-        "sequelize": "^3.30.0"
+        "sequelize": "^6.37.8"
     },
     "overrides": {
         "validator": "^13.15.21",
