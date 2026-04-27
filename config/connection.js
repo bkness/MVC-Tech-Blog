@@ -4,10 +4,7 @@ require('dotenv').config();
 let sequelize;
 
 if (process.env.DATABASE_URL) {
-  sequelize = new Sequelize(process.env.DATABASE_URL, {
-    dialect: 'mysql',
-    dialectModule: require('mysql2'),
-  });
+  sequelize = new Sequelize(process.env.DATABASE_URL);
 } else {
   sequelize = new Sequelize(
     process.env.DB_NAME,
@@ -16,7 +13,6 @@ if (process.env.DATABASE_URL) {
     {
       host: process.env.DB_HOST || '127.0.0.1',
       dialect: 'mysql',
-      dialectModule: require('mysql2'),
       port: process.env.DB_PORT || 3306
     }
   );
