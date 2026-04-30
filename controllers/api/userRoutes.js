@@ -2,9 +2,7 @@ const router = require('express').Router();
 const { User } = require('../../models');
 
 router.post('/', async (req, res) => {
-    console.log(req.body)
     try {
-        // console.log(req.body)
         const userData = await User.create({
             email: req.body.email,
             name: req.body.username,
@@ -18,6 +16,14 @@ router.post('/', async (req, res) => {
             res.status(200).json(userData);
         });
     } catch (err) {
+        if (err.name === 'SequelizeUniqueConstraintError') {
+            const field = err.errors[0]?.path;
+            const message = field === 'name' ? 'Username already taken' : 'Email already in use';
+            return res.status(409).json({ message });
+        }
+        if (err.name === 'SequelizeValidationError') {
+            return res.status(400).json({ message: err.errors[0]?.message || 'Invalid input' });
+        }
         console.error(err);
         res.status(500).json(err);
     }
