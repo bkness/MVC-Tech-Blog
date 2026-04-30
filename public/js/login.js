@@ -21,7 +21,7 @@ const loginformhandler = async (event) => {
   });
 
   if (response.ok) {
-    document.location.replace("/");
+    document.location.replace("/dashboard");
   } else {
     const data = await response.json().catch(() => ({}));
     messageElem.textContent = data.message || "Incorrect username or password.";
@@ -52,7 +52,7 @@ const signupformhandler = async (event) => {
   });
 
   if (response.ok) {
-    document.location.replace("/");
+    document.location.replace("/dashboard");
   } else {
     const data = await response.json().catch(() => ({}));
     messageElem.textContent = data.message || "Signup failed. Please try again.";

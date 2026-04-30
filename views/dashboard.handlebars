@@ -2,6 +2,7 @@
   <a href="/post">  <button id="create-post-button">Post a Blog</button></a>
 </div>
 
+{{#if blogs.length}}
 {{#each blogs}}
   <div class="top-container" id="blog-post" data-blog-id="{{id}}">
         <div id="blog-title">
@@ -17,5 +18,8 @@
         </div>
     </div>
 {{/each}}
+{{else}}
+  <p style="text-align:center; margin-top: 30px; color: rgb(108, 198, 239);">No posts yet — hit the button above to write your first one.</p>
+{{/if}}
 
 <script src="/js/delete-blog.js"></script>
