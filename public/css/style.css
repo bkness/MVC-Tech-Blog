@@ -175,7 +175,8 @@ a:hover {
 #content-body {
   background: linear-gradient(to bottom, #1f1e13, #4d4c3c);
   padding: 20px 7px 10px 15px;
-  height: 250px;
+  height: auto;
+  min-height: 60px;
 }
 
 h1,
@@ -241,11 +242,24 @@ p,
 
 #blog-comment {
   background: #312e1e;
+  display: flex;
+  justify-content: flex-end;
+  padding: 8px 12px;
+}
+
+#blog-comment a {
+  display: inline-block;
+  padding: 6px 14px;
+  background-color: rgb(26, 158, 223);
+  color: azure;
+  border-radius: 4px;
+  font-size: 14px;
+  text-decoration: none;
 }
 
 #blog-comment a:hover {
-  color: rgb(19, 224, 231);
-  ;
+  background-color: rgb(19, 224, 231);
+  color: #111;
 }
 
 #delete-blog {
@@ -286,7 +300,8 @@ div.user-comments {
   border: solid;
   background: linear-gradient(to top, #1f1e13, #4d4c3c);
   width: 75%;
-  height: 200px;
+  height: auto;
+  min-height: 80px;
   margin: 3% 0 20px 12%;
   border-radius: 5px;
   position: relative;

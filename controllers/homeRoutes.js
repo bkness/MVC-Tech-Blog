@@ -20,10 +20,8 @@ router.get('/', async (req, res) => {
     }
 })
 
-router.get('/post', async (req, res) => {
-    res.render('blog-post', {
-        logged_in: true
-    });
+router.get('/post', withAuth, (req, res) => {
+    res.render('blog-post', { logged_in: true });
 });
 
 // GET one blog
@@ -55,38 +53,24 @@ router.get('/blog/:id', withAuth, async (req, res) => {
     }
 });
 
-router.get('/dashboard', async (req, res) => {
+router.get('/dashboard', withAuth, async (req, res) => {
     try {
-        const user_id = req.session.user_id;
-
-        if (!user_id) {
-            console.error('User ID not found in session');
-            return res.status(401).send('Unauthorized');
-        }
-
-
         const postData = await Blog.findAll({
-            where: { user_id },
+            where: { user_id: req.session.user_id },
             include: [User],
-        })
+        });
 
-        const blogs = postData.map(blog => blog.get({ plain: true }))
+        const blogs = postData.map(blog => blog.get({ plain: true }));
         res.render('dashboard', {
             blogs,
-            logged_in: req.session.logged_in,
+            logged_in: true,
             loginPage: false,
-        })
+        });
     } catch (err) {
-        console.log(err.message)
-        res.status(500).json(err.message)
+        console.log(err.message);
+        res.status(500).json(err.message);
     }
 })
-
-router.get('/post', async (req, res) => {
-    res.render('blog-post', {
-        logged_in: true,
-    });
-});
 
 router.delete('/blog/:id', async (req, res) => {
     const blog_id = req.params.id;
@@ -112,14 +96,6 @@ router.get('/update', async (req, res) => {
     })
 })
 
-router.get('/dashboard', withAuth, (req, res) => {
-    const userData = req.session.user;
-
-    res.render('dashboard', {
-        user: userData,
-        logged_in: true,
-    });
-});
 
 // router.get('/update/:commentId', async (req, res) => {
 //     try {
